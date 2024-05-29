@@ -34,7 +34,6 @@ describe("POST /jobs", function () {
         .post("/jobs")
         .send(newJob)
         .set("authorization", `Bearer ${adminToken}`);
-    console.log(resp.error);
     expect(resp.statusCode).toEqual(201);
     expect(resp.body).toEqual({
       job: {
